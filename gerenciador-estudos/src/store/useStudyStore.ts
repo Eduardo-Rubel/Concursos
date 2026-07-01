@@ -178,6 +178,36 @@ export const useStudyStore = create<StudyState>()(
     }),
     {
       name: 'study-management-storage',
+      merge: (persistedState: unknown, currentState: StudyState): StudyState => {
+        const persisted = persistedState as Partial<StudyState> | undefined;
+        if (!persisted) return currentState;
+
+        // Merge settings: env vars fill in empty persisted values
+        const mergedSettings = {
+          ...defaultSettings,
+          ...(persisted.settings || {}),
+        };
+
+        // If persisted values are empty but env vars exist, use env vars
+        if (!mergedSettings.telegramBotToken && defaultSettings.telegramBotToken) {
+          mergedSettings.telegramBotToken = defaultSettings.telegramBotToken;
+        }
+        if (!mergedSettings.telegramChatId && defaultSettings.telegramChatId) {
+          mergedSettings.telegramChatId = defaultSettings.telegramChatId;
+        }
+        if (!mergedSettings.geminiApiKey && defaultSettings.geminiApiKey) {
+          mergedSettings.geminiApiKey = defaultSettings.geminiApiKey;
+        }
+        if (mergedSettings.telegramBotToken && !mergedSettings.enableTelegramAlerts) {
+          mergedSettings.enableTelegramAlerts = true;
+        }
+
+        return {
+          ...currentState,
+          ...persisted,
+          settings: mergedSettings,
+        };
+      },
     }
   )
 );
