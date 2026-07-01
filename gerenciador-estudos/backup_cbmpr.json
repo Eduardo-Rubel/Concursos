@@ -1,0 +1,103 @@
+{
+  "state": {
+    "subjects": [
+      {
+        "id": "cf33d8a7-96a1-432b-9c31-3dc1286c8f61",
+        "name": "Português",
+        "color": "#ef4444",
+        "weight": 2,
+        "priority": "Alta",
+        "status": "Ativo"
+      },
+      {
+        "id": "e0d02462-8415-4bf6-ab1f-1941de5bf55b",
+        "name": "Matemática",
+        "color": "#3b82f6",
+        "weight": 2,
+        "priority": "Alta",
+        "status": "Ativo"
+      },
+      {
+        "id": "8c414f52-db97-4b77-809f-6832442cf38f",
+        "name": "Legislação",
+        "color": "#eab308",
+        "weight": 2,
+        "priority": "Alta",
+        "status": "Ativo"
+      },
+      {
+        "id": "6a9e8b15-cf6d-49d7-ae29-c44bb6dbf5c3",
+        "name": "Física",
+        "color": "#8b5cf6",
+        "weight": 1,
+        "priority": "Média",
+        "status": "Ativo"
+      },
+      {
+        "id": "92f39b16-56a8-4c8d-8067-160fa4e27774",
+        "name": "Química",
+        "color": "#14b8a6",
+        "weight": 1,
+        "priority": "Média",
+        "status": "Ativo"
+      },
+      {
+        "id": "f5e927c4-2b63-42e5-bc35-e63df7e74567",
+        "name": "Biologia",
+        "color": "#22c55e",
+        "weight": 1,
+        "priority": "Média",
+        "status": "Ativo"
+      },
+      {
+        "id": "a1c430e5-7928-4065-bcf9-54823126f5e8",
+        "name": "Informática",
+        "color": "#64748b",
+        "weight": 1,
+        "priority": "Baixa",
+        "status": "Ativo"
+      }
+    ],
+    "sessions": [],
+    "settings": {
+      "userName": "Eduardo",
+      "dailyGoalHours": 4,
+      "pomodoroWork": 50,
+      "pomodoroRest": 10
+    },
+    "schedules": [
+      {
+        "id": "sched-1",
+        "dayOfWeek": 1,
+        "startTime": "08:00",
+        "endTime": "09:00",
+        "subjectId": "cf33d8a7-96a1-432b-9c31-3dc1286c8f61"
+      },
+      {
+        "id": "sched-2",
+        "dayOfWeek": 1,
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "subjectId": "e0d02462-8415-4bf6-ab1f-1941de5bf55b"
+      },
+      {
+        "id": "sched-3",
+        "dayOfWeek": 2,
+        "startTime": "08:00",
+        "endTime": "09:00",
+        "subjectId": "8c414f52-db97-4b77-809f-6832442cf38f"
+      },
+      {
+        "id": "sched-4",
+        "dayOfWeek": 2,
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "subjectId": "6a9e8b15-cf6d-49d7-ae29-c44bb6dbf5c3"
+      }
+    ],
+    "revisions": [],
+    "questionLogs": [],
+    "mockExams": []
+  },
+  "version": 0
+}
