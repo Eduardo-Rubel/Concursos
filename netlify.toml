@@ -1,0 +1,9 @@
+[build]
+  base = "gerenciador-estudos"
+  command = "npm run build"
+  publish = "gerenciador-estudos/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
